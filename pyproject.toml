@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "SPICA"  # Or your chosen name (lowercase, no spaces)
+version = "0.1.0"
+authors = [
+    {name="Adrià Casamitjana", email="adria.casamitjana@udg.edu"},
+
+]
+description = "Automated CT segmentation for VBT planning."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE*"]
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Medical Science applications",
+
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+# List your core dependencies here instead of a separate requirements.txt
+dependencies = [
+    "nnunetv2==2.6.4",
+    "pydicom==3.0.2",
+    "munkres==1.1.4",
+    "opencv-python==4.13.0.92",
+    "monai-1.5.2", # for inference using other state-of-the-art methods
+    "seaborn>=0.13.2",
+    "scikit-image==0.25.2",
+    "scikit-learn>=1.7.2",
+    "torch==2.11.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/acasamitjana/VBTPlan"
+"Bug Tracker" = "https://github.com/acasamitjana/VBTPlan/issues"
+
+[tool.setuptools.packages.find]
+include = ["VBTPlan"]
+
+[project.scripts]
+vbtplan = "scripts:inference"
