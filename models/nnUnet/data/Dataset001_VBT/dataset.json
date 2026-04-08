@@ -1,0 +1,15 @@
+{
+ "channel_names": {
+   "0": "CT"
+ },
+ "labels": {
+   "background": 0,
+   "intesti": 1,
+   "recte": 2,
+   "bufeta": 3,
+   "sigma": 4,
+   "vagina": 5
+ },
+ "numTraining": 174,
+ "file_ending": ".nii.gz"
+ }
